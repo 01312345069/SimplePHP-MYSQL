@@ -19,6 +19,8 @@
         <input type="text" name="Gender" id="Gender" placeholder="Enter your Gender">
         
         <textarea name="Detail" id="Detail" placeholder="Enter your detail"></textarea>
+        <button class="btn">Submit</button>
+      
     </div>
 
     <script src="index.js"></script>

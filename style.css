@@ -15,3 +15,33 @@
 p {
     text-align: center;
 }
+
+input,
+textarea {
+    border: 2px solid black;
+    border-radius: 6px;
+    outline: none;
+    font-size: 17px;
+    width: 81%;
+    margin: 11px;
+    padding: 7px;
+
+}
+
+form {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.btn {
+    color: rgb(214, 195, 195);
+    background-color: rgb(180, 34, 180);
+    padding: 9px 12px;
+    font-size: 21px;
+    border: 2px solid rgb(209, 198, 198);
+    border-radius: 14px;
+    cursor: pointer;
+}
