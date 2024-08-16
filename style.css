@@ -1,0 +1,12 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 82%;
+    background-color: rgb(139, 60, 213);
+    padding: 33px;
+    margin: auto;
+}
