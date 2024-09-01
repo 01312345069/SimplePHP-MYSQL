@@ -1,4 +1,7 @@
 <?php
+if(isset($_POST['name'])){
+
+
 
 $server = "localhost";
 $username = "root";
@@ -28,5 +31,6 @@ if ($con->query($sql)==true){
     echo "ERROR: $sql <br> $con->error";
 }
 $con->close();
+}
 
 ?>
