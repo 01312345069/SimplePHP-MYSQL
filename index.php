@@ -2,7 +2,7 @@
 if(isset($_POST['name'])){
 
 
-
+$insert = false;
 $server = "localhost";
 $username = "root";
 $password = "";
@@ -13,6 +13,7 @@ if(!$con){
     die("connection to this database failed due to". mysqli_connect_error());
 }
 // echo"Success connection to the db";
+$insert = true;
 
 $name = $_POST['name'];
 $age = $_POST['age'];
@@ -27,7 +28,9 @@ $sql = "INSERT INTO `aug`. `picnic` (`name`, `age`, `gender`, `email`, `phone`, 
 
 if ($con->query($sql)==true){
     // echo"Successfully Inserted";
-}else{
+    $insert = true;
+}
+else{
     echo "ERROR: $sql <br> $con->error";
 }
 $con->close();
@@ -41,13 +44,18 @@ $con->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>iThing</title>
-</head>
+</head> 
 <body>
     <div class="container">
         <h3>Welcome to WEBSITE</h3>
         <p>Enter your detail to buy ticket</p>
         <p class="submitmgs">Thanks for submitting your form. We are happy to see you joining us for the China Trip.</p>
-        <p class="submitmsg">Thank you for submitting your form.</p>
+        <?php
+        if($insert == true){
+            echo "<p class='submitmsg'>Thank you for submitting your form.</p>";
+        }
+        
+        ?>
 
         <form action="index.php" method="post">
         <input type="text" name="name" id="name" placeholder="Enter your name">
