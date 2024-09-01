@@ -45,3 +45,13 @@ form {
     border-radius: 14px;
     cursor: pointer;
 }
+
+.submitmgs {
+    font-size: 25px;
+    color: chocolate;
+}
+
+.submitmsg {
+    font-size: 25px;
+    color: rgb(211, 230, 211);
+}
